@@ -10,8 +10,8 @@ namespace Zoo
     public class GameManager : MonoBehaviour
     {
         private static GameManager _instance;
-        private Dictionary<string, IAnimal> animalDictionary = new Dictionary<string, IAnimal>();
-        private List<IAnimal> animalList = new List<IAnimal>();
+        private Dictionary<string, Animal> animalDictionary = new Dictionary<string, Animal>();
+        private List<Animal> animalList = new List<Animal>();
         public static GameManager Instance { get { return _instance; } }
         void Awake()
         {
@@ -25,12 +25,12 @@ namespace Zoo
             }
         }
 
-        public void AddAnimalEntry(string name, IAnimal obj)
+        public void AddAnimalEntry(string name, Animal obj)
         {
             animalDictionary.Add(name, obj);
         }
 
-        public void AddAnimalToList(IAnimal go)
+        public void AddAnimalToList(Animal go)
         {
             animalList.Add(go);
         }
@@ -63,7 +63,7 @@ namespace Zoo
         {
             try
             {
-                animalDictionary[txt.text].SayHello();
+                animalDictionary[txt.text].GetComponent<IAnimal>().SayHello();
             }
             catch (Exception e)
             {

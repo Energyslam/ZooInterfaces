@@ -26,7 +26,7 @@ namespace Zoo
             AddToCollections("panny", panny);
         }
 
-        private void AddToCollections(string name, IAnimal obj)
+        private void AddToCollections(string name, Animal obj)
         {
             GameManager.Instance.AddAnimalEntry(name, obj);
             GameManager.Instance.AddAnimalToList(obj);
