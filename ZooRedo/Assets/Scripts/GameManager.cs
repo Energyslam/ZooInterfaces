@@ -81,5 +81,10 @@ namespace Zoo
                 }
             }
         }
+        public void AddToCollections(string name, Animal obj)
+        {
+            AddAnimalEntry(name, obj);
+            AddAnimalToList(obj);
+        }
     }
 }

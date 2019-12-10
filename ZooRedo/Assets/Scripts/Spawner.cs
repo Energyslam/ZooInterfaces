@@ -17,19 +17,13 @@ namespace Zoo
             Zebra marty = Instantiate(zebra, transform).GetComponent<Zebra>();
             Slime slimo = Instantiate(slime, transform).GetComponent<Slime>();
             Panda panny = Instantiate(panda, transform).GetComponent<Panda>();
-            AddToCollections("henk", henk);
-            AddToCollections("elsa", elsa);
-            AddToCollections("dora", dora);
-            AddToCollections("wally", wally);
-            AddToCollections("marty", marty);
-            AddToCollections("slimo", slimo);
-            AddToCollections("panny", panny);
-        }
-
-        private void AddToCollections(string name, Animal obj)
-        {
-            GameManager.Instance.AddAnimalEntry(name, obj);
-            GameManager.Instance.AddAnimalToList(obj);
+            GameManager.Instance.AddToCollections("henk", henk);
+            GameManager.Instance.AddToCollections("elsa", elsa);
+            GameManager.Instance.AddToCollections("dora", dora);
+            GameManager.Instance.AddToCollections("wally", wally);
+            GameManager.Instance.AddToCollections("marty", marty);
+            GameManager.Instance.AddToCollections("slimo", slimo);
+            GameManager.Instance.AddToCollections("panny", panny);
         }
     }
 }
