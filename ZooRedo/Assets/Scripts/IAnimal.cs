@@ -7,5 +7,6 @@ namespace Zoo
     public interface IAnimal
     {
         void SayHello();
+        string animalname { get; set; }
     }
 }

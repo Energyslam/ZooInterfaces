@@ -25,6 +25,14 @@ namespace Zoo
             }
         }
 
+        private void Start()
+        {
+            foreach (KeyValuePair<string, Animal> pair in animalDictionary)
+            {
+                pair.Value.animalname = pair.Key;
+            }
+        }
+
         public void AddAnimalEntry(string name, Animal obj)
         {
             animalDictionary.Add(name, obj);

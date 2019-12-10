@@ -6,7 +6,7 @@ namespace Zoo
 {
     public class Slime : Animal, ITrickster, IOmnivore
     {
-        public void SayHello()
+        public override void SayHello()
         {
             Balloon.SetActive(true);
             text.text = "s-s-slimey";

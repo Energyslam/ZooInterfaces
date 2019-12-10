@@ -6,7 +6,7 @@ namespace Zoo
 {
     class Lion : Animal, ICarnivore
     {
-        public void SayHello()
+        public override void SayHello()
         {
             Balloon.SetActive(true);
             text.text = "roooaoaaaaar";

@@ -6,7 +6,7 @@ namespace Zoo
 {
     public class Panda : Animal, IHerbivore
     {
-        public void SayHello()
+        public override void SayHello()
         {
             Balloon.SetActive(true);
             text.text = "oniiiiichan";

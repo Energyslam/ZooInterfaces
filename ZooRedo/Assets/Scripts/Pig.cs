@@ -6,7 +6,7 @@ namespace Zoo
 {
     class Pig : Animal, IOmnivore, ITrickster
     {
-        public void SayHello()
+        public override void SayHello()
         {
             Balloon.SetActive(true);
             text.text = "oink oink";

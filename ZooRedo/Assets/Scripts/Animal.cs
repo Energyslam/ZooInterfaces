@@ -5,12 +5,13 @@ using UnityEngine.UI;
 
 namespace Zoo
 {
-    public class Animal : MonoBehaviour
+    public abstract class Animal : MonoBehaviour, IAnimal
     {
         [SerializeField]
         protected GameObject Balloon;
         [SerializeField]
         protected Text text;
-        public string name;
+        public string animalname { get { return name; } set { name = value; } }
+        public abstract void SayHello();
     }
 }
